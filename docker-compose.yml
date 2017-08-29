@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  web:
+    image: node:alpine
+    command: yarn start
+    working_dir: /usr/local/src
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/local/src
+      - node_modules:/usr/local/src/node_modules
+volumes:
+  node_modules: {}

@@ -2,3 +2,8 @@
 
 git branch -D gh-pages
 git checkout -b gh-pages
+docker-compose run --rm web yarn build
+find . -not -name 'gh-pages' -not -name 'index.html' -not -path '*git*' -not -path '*dist*' -delete
+sudo chown -R $USER:users .
+mv ./dist* .
+rm -f ./dist

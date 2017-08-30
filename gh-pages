@@ -7,3 +7,7 @@ find . -not -name 'gh-pages' -not -name 'index.html' -not -path '*git*' -not -pa
 sudo chown -R $USER:users .
 mv ./dist* .
 rm -f ./dist
+git a .
+git commit -m "update gh-pages"
+git push -f origin gh-pages
+

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+git a .
+git c "bkp"
 git checkout -b gh-pages
 docker-compose run --rm web yarn build
 find . -not -name 'index.html' -not -path '*git*' -not -path '*dist*' -delete

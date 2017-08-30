@@ -4,16 +4,14 @@ import {
   Appear, BlockQuote, Cite, CodePane, ComponentPlayground, Deck, Fill,
   Heading, Image, Layout, Link, ListItem, List, Markdown, MarkdownSlides, Quote, Slide, SlideSet,
   TableBody, TableHeader, TableHeaderItem, TableItem, TableRow, Table, Text
-} from "../../src";
+} from "spectacle";
 
-import preloader from "../../src/utils/preloader";
+import preloader from "spectacle/lib/utils/preloader";
 
-import createTheme from "../../src/themes/default";
-
-import Interactive from "../assets/interactive";
+import createTheme from "spectacle/lib/themes/default";
 
 require("normalize.css");
-require("../../src/themes/default/index.css");
+require("spectacle/src/themes/default/index.css");
 
 const images = {
   city: require("../assets/city.jpg"),
@@ -170,7 +168,6 @@ Slides are separated with **three dashes** and can be used _anywhere_ in the dec
             <Heading size={1} caps fit textColor="tertiary">
               Your presentations are interactive
             </Heading>
-            <Interactive/>
           </Slide>
         </SlideSet>
         <Slide transition={["slide"]} bgColor="primary"
